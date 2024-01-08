@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Inventory", menuName = "nyns-2024/Inventory", order = 0)]
@@ -35,8 +36,8 @@ public class Inventory : ScriptableObject {
 
     public int getInventorySize(){return itemList.Count;}
 
-    public void Awake() {
-        itemList = startingItems;
+    public void OnEnable() {
+        itemList = new List<Item>(startingItems);
         Debug.Log(itemList.Count);
     }
 }

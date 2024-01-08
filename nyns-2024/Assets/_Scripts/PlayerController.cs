@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void FixedUpdate()
@@ -37,14 +37,15 @@ public class PlayerController : MonoBehaviour
 
     private void HandleLook()
     {
+        //TODO: Fix this up so it stops hitching all over the place.
         float xMouseInput = Input.GetAxisRaw("Mouse X") * _cameraSens * Time.deltaTime;
         float yMouseInput = Input.GetAxisRaw("Mouse Y") * _cameraSens * Time.deltaTime;
 
         _yRotation += xMouseInput;
         _xRotation = Mathf.Clamp(_xRotation - yMouseInput, -90f, 90f);
 
-        _cameraOrientation.rotation = Quaternion.Euler(_xRotation, _yRotation, 0);
-        _playerOrientation.rotation = Quaternion.Euler(0, _yRotation, 0);
+        _cameraOrientation.rotation = Quaternion.Euler(_xRotation, _yRotation, 0.0f);
+        _playerOrientation.rotation = Quaternion.Euler(0.0f, _yRotation, 0.0f);
     }
 
     private void HandleMovement()

@@ -22,24 +22,11 @@ public class PlayerController : MonoBehaviour
 
     private float _xRotation;
     private float _yRotation;
-    private InputAction _playerLook;
-    private InputAction _playerMovement;
-    private PlayerControls _playerControls;
 
     private void Awake()
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Confined;
-
-        _playerControls = new PlayerControls();
-
-        _playerLook = _playerControls.FindAction("Look");
-        _playerMovement = _playerControls.FindAction("Movement");
-    }
-
-    private void OnEnable()
-    {
-        _playerControls.Enable();
     }
 
     private void FixedUpdate()
@@ -50,10 +37,11 @@ public class PlayerController : MonoBehaviour
 
     private void HandleLook()
     {
-        Vector2 userInput = _playerLook.ReadValue<Vector2>() * _cameraSens * Time.deltaTime;
+        float xMouseInput = Input.GetAxisRaw("Mouse X") * _cameraSens * Time.deltaTime;
+        float yMouseInput = Input.GetAxisRaw("Mouse Y") * _cameraSens * Time.deltaTime;
 
-        _yRotation += userInput.x;
-        _xRotation = Mathf.Clamp(_xRotation - userInput.y, -90f, 90f);
+        _yRotation += xMouseInput;
+        _xRotation = Mathf.Clamp(_xRotation - yMouseInput, -90f, 90f);
 
         _cameraOrientation.rotation = Quaternion.Euler(_xRotation, _yRotation, 0);
         _playerOrientation.rotation = Quaternion.Euler(0, _yRotation, 0);
@@ -61,14 +49,11 @@ public class PlayerController : MonoBehaviour
 
     private void HandleMovement()
     {
-        Vector2 userInput = _playerMovement.ReadValue<Vector2>();
-        Vector3 moveDirection = _playerOrientation.forward * userInput.y + _playerOrientation.right * userInput.x;
+        float xMovement = Input.GetAxisRaw("Horizontal");
+        float zMovement = Input.GetAxisRaw("Vertical");
+
+        Vector3 moveDirection = _playerOrientation.forward * zMovement + _playerOrientation.right * xMovement;
 
         _playerRigidbody.AddForce(moveDirection.normalized * _movementSpeed * 10f, ForceMode.Force);
-    }
-
-    private void OnDisable()
-    {
-        _playerControls.Disable();
     }
 }

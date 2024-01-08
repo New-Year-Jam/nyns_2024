@@ -15,8 +15,8 @@ public class ItemController : MonoBehaviour
         if (canBePickedUp)
         {
             //TODO: Display Message
-            Debug.Log("Within Range of Object: " + itemData.name);
-            if (Input.GetButtonDown("Pick-Up"))
+
+            if (Input.GetButton("Pick-Up"))
             {
                 inventoryToEnter.addItem(itemData);
                 Destroy(gameObject);

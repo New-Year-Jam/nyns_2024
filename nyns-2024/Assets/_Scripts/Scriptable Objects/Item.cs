@@ -7,7 +7,7 @@ public class Item : ScriptableObject {
     [SerializeField] new string name;
     [SerializeField] Image itemImage;
 
-    [TextArea(15,20)]
+    [TextArea(15,10)]
     [SerializeField] string description;
     [SerializeField] bool canPickup;
 

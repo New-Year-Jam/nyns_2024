@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0eb84f79ef88a234d92eb039ac8ba0a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraSens: 300
+  _cameraSens: 500
   _movementSpeed: 3
   _cameraOrientation: {fileID: 8077548773895070370}
   _playerOrientation: {fileID: 6060983376255643995}

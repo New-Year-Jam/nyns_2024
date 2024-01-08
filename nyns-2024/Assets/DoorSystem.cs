@@ -10,6 +10,7 @@ public class DoorSystem : MonoBehaviour
     [SerializeField] bool locked;
     [SerializeField] Transform doorOpenPoint;
     [SerializeField] Transform doorClosePoint;
+    [SerializeField] float doorOpenSpeed = 1.0f;
     bool previousSignalState;
 
 
@@ -33,11 +34,11 @@ public class DoorSystem : MonoBehaviour
         {
             if (open)
             {
-                LeanTween.move(gameObject,doorOpenPoint,1.5f).setEaseInCubic();
+                LeanTween.move(gameObject,doorOpenPoint,doorOpenSpeed).setEaseOutCubic();
             } 
             else
             {
-                LeanTween.move(gameObject,doorClosePoint,1.5f).setEaseInCubic();
+                LeanTween.move(gameObject,doorClosePoint,doorOpenSpeed).setEaseOutCubic();
             }         
         } 
         else

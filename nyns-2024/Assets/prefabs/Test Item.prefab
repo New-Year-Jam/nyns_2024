@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6865109538853846027}
+  - component: {fileID: 1689817054767238611}
   - component: {fileID: 6271637515311101213}
   - component: {fileID: 410703451945717508}
   - component: {fileID: 935624843184624649}
   - component: {fileID: 7513826900220650402}
-  - component: {fileID: 1689817054767238611}
   m_Layer: 0
   m_Name: Test Item
   m_TagString: Untagged
@@ -36,6 +36,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1689817054767238611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7179717085390680330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c3cb2135b3f11e4ea22fb55e10f4783, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionName: Pick Up
+  active: 1
+  itemData: {fileID: 11400000, guid: e205c4b543c9bb842af5d4c25f3f99c9, type: 2}
+  inventoryToEnter: {fileID: 11400000, guid: 75d123ab4ca3ccd469f8d17759143338, type: 2}
 --- !u!33 &6271637515311101213
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -128,18 +144,3 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1689817054767238611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7179717085390680330}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c3cb2135b3f11e4ea22fb55e10f4783, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemData: {fileID: 11400000, guid: e205c4b543c9bb842af5d4c25f3f99c9, type: 2}
-  inventoryToEnter: {fileID: 11400000, guid: 75d123ab4ca3ccd469f8d17759143338, type: 2}
-  canBePickedUp: 1

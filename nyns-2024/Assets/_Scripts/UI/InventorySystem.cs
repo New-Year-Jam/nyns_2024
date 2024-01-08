@@ -2,8 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
-using UnityEngine.UIElements;
 
 public class InventorySystem : MonoBehaviour
 {
@@ -17,7 +15,7 @@ public class InventorySystem : MonoBehaviour
 
     
     int previousInventorySize = 0;
-    bool active = true;
+    bool active = false;
     // Update is called once per frame
     void Update()
     {

@@ -7,7 +7,7 @@ public class Signal : ScriptableObject {
 
     public bool getState() {return currentState;}
     public void changeState(bool newState) {currentState = newState;}
-    private void Awake() {
+    private void OnEnable() {
         currentState = defaultState;
     }
 }

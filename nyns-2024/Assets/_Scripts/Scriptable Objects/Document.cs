@@ -1,18 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Document : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+[CreateAssetMenu(fileName = "Document", menuName = "nyns-2024/Document", order = 0)]
+public class Document : ScriptableObject {
+    [Header("Document Info")]
+    [SerializeField] string docHeader;
+    
+    [TextArea(15,10)]
+    [SerializeField] string docBody;
 }

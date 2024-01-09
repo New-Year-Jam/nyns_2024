@@ -111,6 +111,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiName: {fileID: 441778714913117109}
+  descriptionHeader: {fileID: 11400000, guid: 96cb5047560721b4f8731829bb36a084, type: 2}
+  descriptionBody: {fileID: 11400000, guid: 9fe0a284b6fc83840a37835ab04804ad, type: 2}
 --- !u!1 &7709570062375107278
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class InventorySystem : MonoBehaviour
 {
@@ -13,6 +14,12 @@ public class InventorySystem : MonoBehaviour
     [SerializeField] Transform outPoint;
     [SerializeField] float moveTime = 0.5f;
     [SerializeField] Signal cameraLock;
+
+    [Header("Item Description Variables")]
+    [SerializeField] TextMeshProUGUI headerText;
+    [SerializeField] TextMeshProUGUI headerBody;
+    [SerializeField] FloatingString descriptionHeader;
+    [SerializeField] FloatingString descriptionBody;
 
     
     int previousInventorySize = 0;
@@ -33,6 +40,9 @@ public class InventorySystem : MonoBehaviour
             cameraLock.changeState(!cameraLock.getState());
             changePosition(active);
         }
+
+        headerText.text = descriptionHeader.getString();
+        headerBody.text = descriptionBody.getString();
         
     }
 

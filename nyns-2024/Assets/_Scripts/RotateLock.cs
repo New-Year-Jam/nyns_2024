@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class RotateLock : MonoBehaviour
+public class RotateLock : Interactable
 {
     public static event Action<string, int> _Rotated = delegate {};
 
@@ -19,7 +19,7 @@ public class RotateLock : MonoBehaviour
         transform.Rotate(0f, 0f, _currNum * -36f);
     }
 
-    private void OnCollisionStay(Collision other)
+    public override void Action()
     {
         if (Input.GetButton("Interact") && _coroutineAllowed)
         {

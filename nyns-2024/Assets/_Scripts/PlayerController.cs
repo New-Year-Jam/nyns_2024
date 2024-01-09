@@ -5,6 +5,9 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]
+    private float _interactDistance;
+
+    [SerializeField]
     private float _cameraSens;
 
     [SerializeField]
@@ -45,7 +48,10 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-    private void FixedUpdate() {HandleMovement();}
+    private void FixedUpdate() {
+        HandleMovement();
+        HandleInteractions();
+    }
     public void LockCamera()
     {
         Cursor.visible = true;
@@ -81,5 +87,20 @@ public class PlayerController : MonoBehaviour
         Vector3 moveDirection = _playerOrientation.forward * zMovement + _playerOrientation.right * xMovement;
 
         _playerRigidbody.AddForce(moveDirection.normalized * _movementSpeed * 10f, ForceMode.Force);
+    }
+
+    private void HandleInteractions()
+    {
+        Vector3 playerPosition = _cameraOrientation.position;
+        Vector3 crosshairDirection = _cameraOrientation.TransformDirection(Vector3.forward) * _interactDistance;
+
+        if (Physics.Raycast(playerPosition, crosshairDirection, out RaycastHit hit))
+        {
+            Interactable interactableObj = hit.collider.gameObject.GetComponent<Interactable>();
+
+            if (Input.GetButton("Interact") && interactableObj) {
+                interactableObj.Action();
+            }
+        }
     }
 }

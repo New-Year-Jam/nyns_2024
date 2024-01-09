@@ -22,34 +22,55 @@ public class PlayerController : MonoBehaviour
 
     private float _xRotation;
     private float _yRotation;
+    
+    [SerializeField] Signal cameraLock;
+    bool previousCameraLock;
 
-    private void Awake()
-    {
-        //Cursor.visible = false;
-        //Cursor.lockState = CursorLockMode.Locked;
-    }
-
-    private void Update() 
-    {
+    private void Awake() {UnlockCamera();}
+    private void Update() {
         HandleLook();
+
+        // Handle Camera Locking
+        bool currentLockState = cameraLock.getState();
+        if (previousCameraLock != currentLockState)
+        {
+            previousCameraLock = currentLockState;
+            if (currentLockState == true)
+            {
+                LockCamera();
+            } 
+            else
+            {
+                UnlockCamera();
+            }
+        }
+    }
+    private void FixedUpdate() {HandleMovement();}
+    public void LockCamera()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Confined;      
     }
 
-    private void FixedUpdate()
+    public void UnlockCamera()
     {
-        HandleMovement();
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;  
     }
 
     private void HandleLook()
     {
-        //TODO: Fix this up so it stops hitching all over the place.
-        float xMouseInput = Input.GetAxisRaw("Mouse X") * _cameraSens * Time.deltaTime;
-        float yMouseInput = Input.GetAxisRaw("Mouse Y") * _cameraSens * Time.deltaTime;
+        if (!cameraLock.getState())
+        {
+            float xMouseInput = Input.GetAxisRaw("Mouse X") * _cameraSens * Time.deltaTime;
+            float yMouseInput = Input.GetAxisRaw("Mouse Y") * _cameraSens * Time.deltaTime;
 
-        _yRotation += xMouseInput;
-        _xRotation = Mathf.Clamp(_xRotation - yMouseInput, -90f, 90f);
+            _yRotation += xMouseInput;
+            _xRotation = Mathf.Clamp(_xRotation - yMouseInput, -90f, 90f);
 
-        _cameraOrientation.rotation = Quaternion.Euler(_xRotation, _yRotation, 0.0f);
-        _playerOrientation.rotation = Quaternion.Euler(0.0f, _yRotation, 0.0f);
+            _cameraOrientation.rotation = Quaternion.Euler(_xRotation, _yRotation, 0.0f);
+            _playerOrientation.rotation = Quaternion.Euler(0.0f, _yRotation, 0.0f);            
+        }
     }
 
     private void HandleMovement()

@@ -170,11 +170,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0eb84f79ef88a234d92eb039ac8ba0a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraSens: 500
+  _cameraSens: 700
   _movementSpeed: 3
   _cameraOrientation: {fileID: 8077548773895070370}
   _playerOrientation: {fileID: 6060983376255643995}
   _playerRigidbody: {fileID: 6282540599833347362}
+  cameraLock: {fileID: 11400000, guid: 1d01ab5d5d69967428fdd19fc201c36b, type: 2}
 --- !u!1001 &5862325564322293084
 PrefabInstance:
   m_ObjectHideFlags: 0

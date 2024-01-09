@@ -1,22 +1,26 @@
 using TMPro;
 using UnityEngine;
 
-// Handles ONLY the visual aspects of the keypad and button functionality.
+// Handles the visual aspects of the keypad and button functionality.
 public class InputUI : MonoBehaviour {
     
     [SerializeField] Transform inPoint;
     [SerializeField] Transform outPoint;
     [SerializeField] TextMeshProUGUI inputText;
     [SerializeField] FloatingString floatingString;
+    [SerializeField] Signal cameraLock;
+
     Password passwordToCheck;
 
     public void Show()
     {
         Debug.Log("Trying to show");
+        cameraLock.changeState(true);
         LeanTween.moveY(gameObject,inPoint.localPosition.y,1.0f).setEaseInCubic();
     }
     public void Hide(){
         passwordToCheck = null;
+        cameraLock.changeState(false);
         LeanTween.moveY(gameObject,outPoint.localPosition.y,1.0f).setEaseOutCubic();
     }
     public void UpdateText(){inputText.text = floatingString.getString();}

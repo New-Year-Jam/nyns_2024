@@ -12,6 +12,7 @@ public class InventorySystem : MonoBehaviour
     [SerializeField] Transform inPoint;
     [SerializeField] Transform outPoint;
     [SerializeField] float moveTime = 0.5f;
+    [SerializeField] Signal cameraLock;
 
     
     int previousInventorySize = 0;
@@ -29,6 +30,7 @@ public class InventorySystem : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             active = !active;
+            cameraLock.changeState(!cameraLock.getState());
             changePosition(active);
         }
         

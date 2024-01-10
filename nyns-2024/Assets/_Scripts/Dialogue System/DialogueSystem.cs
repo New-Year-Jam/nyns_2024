@@ -12,6 +12,9 @@ public class DialogueSystem : MonoBehaviour
     private Signal _movementLock;
 
     [SerializeField]
+    private Signal _pauseLock;
+
+    [SerializeField]
     private TextMeshProUGUI _characterNameUI;
     
     [SerializeField]
@@ -44,7 +47,7 @@ public class DialogueSystem : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0) && (_pauseLock.getState() == false))
         {
             if(_characterTextUI.text == _characterDialogue[_index].text)
             {

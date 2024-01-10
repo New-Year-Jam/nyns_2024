@@ -15,12 +15,14 @@ public class DialogueSystem : MonoBehaviour
     private float _textSpeed;
 
     private Dialogue[] _characterDialogue;
+    private Character _characterComponent;
     private int _index;
 
-    public void SetDialogue(Dialogue[] characterDialogue)
+    public void SetDialogue(Character characterComponent, Dialogue[] characterDialogue)
     {
+        _characterComponent = characterComponent;
         _characterDialogue = characterDialogue;
-        _characterTextUI.text = string.Empty;
+        _characterTextUI.text = "";
 
         StartDialogue();
     }
@@ -65,12 +67,13 @@ public class DialogueSystem : MonoBehaviour
         if (_index < _characterDialogue.Length - 1)
         {
             _index++;
-            _characterTextUI.text = string.Empty;
+            _characterTextUI.text = "";
             StartCoroutine(DisplayDialogue());
         }
         else
         {
             gameObject.SetActive(false);
+            _characterComponent.EnableInteractivity();
         }
     }
 }

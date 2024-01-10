@@ -5787,11 +5787,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionName: 
   active: 0
-  _dialogue:
+  _storyDialogue:
   - characterName: Lemon
     text: Hello, world!
   - characterName: You
-    text: Hello, weird siren lady!
+    text: Hello, Lemon!
+  - characterName: Lemon
+    text: Looks like this place is coming along well, isn't it?
+  - characterName: You
+    text: Yeah, I think it's great! :D
+  _repeatDialogue:
+  - characterName: Lemon
+    text: I wonder what the full story is going to be...
   _dialogueSystem: {fileID: 444904313}
 --- !u!135 &763477237
 SphereCollider:

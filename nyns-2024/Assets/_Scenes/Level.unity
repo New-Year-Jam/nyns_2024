@@ -4807,6 +4807,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6323773947039139690, guid: 3e3ffe674aeb1d74fbc989b0c432d777,
+        type: 3}
+      propertyPath: _cameraLock
+      value: 
+      objectReference: {fileID: 11400000, guid: 1d01ab5d5d69967428fdd19fc201c36b,
+        type: 2}
+    - target: {fileID: 6323773947039139690, guid: 3e3ffe674aeb1d74fbc989b0c432d777,
+        type: 3}
+      propertyPath: _movementLock
+      value: 
+      objectReference: {fileID: 11400000, guid: 3c24dd7f4dafea64ab210f60dc53a195,
+        type: 2}
     - target: {fileID: 6700621670919091204, guid: 3e3ffe674aeb1d74fbc989b0c432d777,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -5118,6 +5130,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6368118878993219308, guid: 07e21dd661ff57242b3c516dcd26867c,
+        type: 3}
+      propertyPath: movementLock
+      value: 
+      objectReference: {fileID: 11400000, guid: 3c24dd7f4dafea64ab210f60dc53a195,
+        type: 2}
     - target: {fileID: 6368118878993219308, guid: 07e21dd661ff57242b3c516dcd26867c,
         type: 3}
       propertyPath: _interactDistance

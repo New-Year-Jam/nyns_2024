@@ -12,17 +12,16 @@ public abstract class Interactable : MonoBehaviour
 
     public abstract void Action();
 
-    
-    private void OnTriggerStay(Collider other) {
-        if (active) //TODO: Make it so it checks if the player is actually looking at the interactable too.
-        {
-            //TODO: Display Message
+    // private void OnTriggerStay(Collider other) {
+    //     if (active) //TODO: Make it so it checks if the player is actually looking at the interactable too.
+    //     {
+    //         //TODO: Display Message
 
 
-            if (Input.GetButton("Interact"))
-            {
-                Action();
-            }            
-        }
-    }
+    //         if (Input.GetButton("Interact"))
+    //         {
+    //             Action();
+    //         }            
+    //     }
+    // }
 }

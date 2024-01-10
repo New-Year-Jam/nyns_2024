@@ -3,7 +3,17 @@ guid: 82a8217ca85139f4d95c20b155d3760d
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mermaid_Body
+    second: {fileID: 2100000, guid: eb12e70b8d241eb4e882640457b3675c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mermaid_Hair
+    second: {fileID: 2100000, guid: df320a0194413374395e2b6ba98dc4cf, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

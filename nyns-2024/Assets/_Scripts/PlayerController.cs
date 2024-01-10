@@ -29,7 +29,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Signal cameraLock;
     bool previousCameraLock;
 
-    private void Awake() {UnlockCamera();}
+    [SerializeField] Signal movementLock;
+    bool previousMovementLock;
+
+    private void Awake() {
+        UnlockCamera();
+        movementLock.changeState(false);
+    }
     private void Update() {
         HandleLook();
 
@@ -49,8 +55,13 @@ public class PlayerController : MonoBehaviour
         }
     }
     private void FixedUpdate() {
-        HandleMovement();
-        HandleInteractions();
+        // Handle movement locking
+        bool currentMovementState = movementLock.getState();
+        if (currentMovementState == false)
+        {
+            HandleMovement();
+            HandleInteractions();
+        }
     }
     public void LockCamera()
     {

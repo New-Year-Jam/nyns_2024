@@ -6,6 +6,12 @@ using TMPro;
 public class DialogueSystem : MonoBehaviour
 {
     [SerializeField]
+    private Signal _cameraLock;
+
+    [SerializeField]
+    private Signal _movementLock;
+
+    [SerializeField]
     private TextMeshProUGUI _characterNameUI;
     
     [SerializeField]
@@ -20,6 +26,9 @@ public class DialogueSystem : MonoBehaviour
 
     public void SetDialogue(Character characterComponent, Dialogue[] characterDialogue)
     {
+        _cameraLock.changeState(true);
+        _movementLock.changeState(true);
+
         _characterComponent = characterComponent;
         _characterDialogue = characterDialogue;
         _characterTextUI.text = "";
@@ -73,6 +82,8 @@ public class DialogueSystem : MonoBehaviour
         else
         {
             gameObject.SetActive(false);
+            _cameraLock.changeState(false);
+            _movementLock.changeState(false);
             _characterComponent.EnableInteractivity();
         }
     }

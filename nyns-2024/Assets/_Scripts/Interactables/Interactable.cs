@@ -8,8 +8,7 @@ public abstract class Interactable : MonoBehaviour
 {
     [Header("Interactable Info")]
     [SerializeField] string interactionName;
-    [SerializeField] bool active;
-
+    [SerializeField] bool active;    
     public abstract void Action();
 
     // private void OnTriggerStay(Collider other) {

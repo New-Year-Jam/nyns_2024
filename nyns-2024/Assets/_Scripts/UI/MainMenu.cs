@@ -5,6 +5,12 @@ public class MainMenu : MonoBehaviour
 {
     [SerializeField]
     private GameObject _settingsUI;
+    
+    [SerializeField]
+    private GameObject _tutorialUI;
+    
+    [SerializeField]
+    private GameObject _creditsUI;
 
     public void StartGame()
     {
@@ -17,9 +23,16 @@ public class MainMenu : MonoBehaviour
         _settingsUI.SetActive(!isDisplayed);
     }
 
+    public void ShowTutorial()
+    {
+        bool isDisplayed = _tutorialUI.activeSelf;
+        _tutorialUI.SetActive(!isDisplayed);
+    }
+
     public void ShowCredits()
     {
-        Debug.Log("The credits menu...");
+        bool isDisplayed = _creditsUI.activeSelf;
+        _creditsUI.SetActive(!isDisplayed);
     }
 
     public void QuitGame()

@@ -48,13 +48,14 @@ public class InputUI : MonoBehaviour {
         if (passwordToCheck.checkCode(attempt))
         {
             // Attempt successful
-            passwordToCheck.activateSignal();
+            passwordToCheck.activatePositiveSignal();
             Debug.Log("Success!");
             Hide();
         }
         else
         {
             Debug.Log("Fail!");
+            passwordToCheck.activateNegativeSignal();
             Hide();
         }
     }

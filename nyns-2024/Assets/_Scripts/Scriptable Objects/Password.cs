@@ -5,9 +5,12 @@ using UnityEngine;
 public class Password : ScriptableObject {
     [Header("Password Information")]
     [SerializeField] int password;
-    [SerializeField] Signal signalToActivate;
-    [SerializeField] bool changeSignalTo;
+    [SerializeField] Signal positiveSignal;
+    [SerializeField] bool changePositiveSignalTo;
+    [SerializeField] Signal negativeSignal;
+    [SerializeField] bool changeNegativeSignalTo;
 
     public bool checkCode(int test){return test == password ? true : false;}
-    public void activateSignal(){signalToActivate.changeState(changeSignalTo);}
+    public void activatePositiveSignal(){positiveSignal.changeState(changePositiveSignalTo);}
+    public void activateNegativeSignal(){negativeSignal.changeState(changeNegativeSignalTo);}
 }

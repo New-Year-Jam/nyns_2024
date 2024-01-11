@@ -5,11 +5,11 @@ public class Character : Interactable
     [Header("Character Dialogue")]
     [SerializeField]
     [Tooltip("Triggered once, won't repeat.")]
-    private Dialogue[] _storyDialogue;
+    private Dialogue _storyDialogue;
 
     [SerializeField]
     [Tooltip("Remains consistent after multiple interactions.")]
-    private Dialogue[] _repeatDialogue;
+    private Dialogue _repeatDialogue;
 
     [SerializeField]
     private DialogueSystem _dialogueSystem;
@@ -19,7 +19,7 @@ public class Character : Interactable
 
     private void Start()
     {
-        if (_storyDialogue.Length == 0)
+        if (_storyDialogue.getDialogueLength() == 0)
         {
             _storyComplete = true;
         }
@@ -34,12 +34,15 @@ public class Character : Interactable
 
             if (!_storyComplete)
             {
-                _dialogueSystem.SetDialogue(this, _storyDialogue);
+                _dialogueSystem.SetDialogue(this, _storyDialogue.getLines());
                 _storyComplete = true;
             }
             else
             {
-                _dialogueSystem.SetDialogue(this, _repeatDialogue);
+                if (_repeatDialogue != null)
+                {
+                    _dialogueSystem.SetDialogue(this, _repeatDialogue.getLines());
+                }
             }
         }
     }

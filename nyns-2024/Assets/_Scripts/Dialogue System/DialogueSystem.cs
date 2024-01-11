@@ -23,11 +23,11 @@ public class DialogueSystem : MonoBehaviour
     [SerializeField]
     private float _textSpeed;
 
-    private Dialogue[] _characterDialogue;
+    private line[] _characterDialogue;
     private Character _characterComponent;
     private int _index;
 
-    public void SetDialogue(Character characterComponent, Dialogue[] characterDialogue)
+    public void SetDialogue(Character characterComponent, line[] characterDialogue)
     {
         _cameraLock.changeState(true);
         _movementLock.changeState(true);

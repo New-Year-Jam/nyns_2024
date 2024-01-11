@@ -1149,10 +1149,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cameraLock: {fileID: 11400000, guid: 1d01ab5d5d69967428fdd19fc201c36b, type: 2}
   _movementLock: {fileID: 11400000, guid: 3c24dd7f4dafea64ab210f60dc53a195, type: 2}
+  _pauseLock: {fileID: 11400000, guid: 613ab9af912253a409da6cb44a173f51, type: 2}
   _characterNameUI: {fileID: 4318044422858640321}
   _characterTextUI: {fileID: 2705769794304640214}
   _textSpeed: 0.01
-  _pauseLock: {fileID: 11400000, guid: 613ab9af912253a409da6cb44a173f51, type: 2}
 --- !u!1 &3400001967474908481
 GameObject:
   m_ObjectHideFlags: 0
@@ -1280,6 +1280,8 @@ MonoBehaviour:
   _movementLock: {fileID: 11400000, guid: 3c24dd7f4dafea64ab210f60dc53a195, type: 2}
   _pauseLock: {fileID: 0}
   _dialogueUI: {fileID: 3383977707427858840}
+  _inventoryUI: {fileID: 0}
+  _terminalUI: {fileID: 0}
   _pauseMenuUI: {fileID: 3690372560980443188}
 --- !u!1 &3690372560980443188
 GameObject:

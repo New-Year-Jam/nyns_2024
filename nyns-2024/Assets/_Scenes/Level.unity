@@ -51608,6 +51608,7 @@ GameObject:
   - component: {fileID: 1316299687}
   - component: {fileID: 1316299689}
   - component: {fileID: 1316299688}
+  - component: {fileID: 1316299690}
   m_Layer: 0
   m_Name: PasswordInputter
   m_TagString: Untagged
@@ -51624,7 +51625,7 @@ Transform:
   m_GameObject: {fileID: 1316299686}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.94999945, y: 1.0416666, z: 2.0833333}
+  m_LocalPosition: {x: 0.05, y: 1.0416666, z: 1.74}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -51667,8 +51668,29 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 1
+  m_Radius: 2.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &1316299690
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316299686}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 5.0062613, y: 3.3782935, z: 2.4925942}
+  m_Center: {x: -0.0123405885, y: -0.34237742, z: -1.1087599}
 --- !u!1 &1318042973
 GameObject:
   m_ObjectHideFlags: 0

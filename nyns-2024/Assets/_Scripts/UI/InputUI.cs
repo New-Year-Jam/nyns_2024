@@ -9,6 +9,8 @@ public class InputUI : MonoBehaviour {
     [SerializeField] TextMeshProUGUI inputText;
     [SerializeField] FloatingString floatingString;
     [SerializeField] Signal cameraLock;
+    [SerializeField] GameObject _lockedObject;
+    [SerializeField] GameObject _autoDialogue;
 
     Password passwordToCheck;
 
@@ -51,6 +53,9 @@ public class InputUI : MonoBehaviour {
             passwordToCheck.activatePositiveSignal();
             Debug.Log("Success!");
             Hide();
+            _lockedObject.SetActive(false);
+            _autoDialogue.SetActive(true);
+            // _dialogueSystem.SetDialogue(new Character(), _dialogue);
         }
         else
         {

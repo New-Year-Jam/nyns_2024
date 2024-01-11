@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-[RequireComponent(typeof(SphereCollider))]
+// [RequireComponent(typeof(SphereCollider))]
 public abstract class Interactable : MonoBehaviour
 {
     [Header("Interactable Info")]

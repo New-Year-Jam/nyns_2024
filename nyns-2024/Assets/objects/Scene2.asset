@@ -16,12 +16,12 @@ MonoBehaviour:
   - characterName: Security
     text: Warning!!! Attempt at security breach. All doors have been locked, follow
       usual  security proceedings.
-  - characterName: Nell
+  - characterName: Siren
     text: What's happening?!
   - characterName: '>'
     text: The security system turned on! I used the password by the computer like
       you said. It should've worked!
-  - characterName: Nell
+  - characterName: Siren
     text: Humans have always been odd, but the one that trapped me especially...
-  - characterName: Nell
+  - characterName: Siren
     text: That must have been a trap. Try looking somewhere else!

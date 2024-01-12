@@ -17,5 +17,5 @@ MonoBehaviour:
     text: A vault?
   - characterName: '>'
     text: I thought it was going to open the door!
-  - characterName: Nell
+  - characterName: Siren
     text: Well, What's inside it? It could be helpful.

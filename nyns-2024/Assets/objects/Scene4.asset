@@ -10,16 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d90a5299891efd14089aee8fcdfea951, type: 3}
-  m_Name: Scene3_2
+  m_Name: Scene4
   m_EditorClassIdentifier: 
   lines:
   - characterName: Siren
-    text: That key...
+    text: This is it...
   - characterName: Siren
-    text: I believe it would be able to open my cell from the inside.
+    text: Thank you, truly.
   - characterName: Siren
-    text: Please, find a way to open the hatch between us.
+    text: I won't forget this kindness. Stay safe, little human.
   - characterName: '>'
-    text: Don't worry, we're almost there.
+    text: You too... Goodbye, miss siren.
   - characterName: Siren
-    text: Thank you, friend.
+    text: You can call me by my name, NLLS.
+  - characterName: '>'
+    text: N- Nell?
+  - characterName: Nell
+    text: Haha, close enough.

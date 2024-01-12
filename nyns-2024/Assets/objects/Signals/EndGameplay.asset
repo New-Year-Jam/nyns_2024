@@ -9,11 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d90a5299891efd14089aee8fcdfea951, type: 3}
-  m_Name: IntroDialogue1
+  m_Script: {fileID: 11500000, guid: 5300f1341547f18448cf303e3c28db76, type: 3}
+  m_Name: EndGameplay
   m_EditorClassIdentifier: 
-  lines:
-  - characterName: ???
-    text: Hello?!
-  - characterName: ???
-    text: Can you hear me?!
+  defaultState: 0

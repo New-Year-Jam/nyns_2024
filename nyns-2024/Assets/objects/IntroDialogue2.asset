@@ -13,27 +13,27 @@ MonoBehaviour:
   m_Name: IntroDialogue2
   m_EditorClassIdentifier: 
   lines:
-  - characterName: Nell
+  - characterName: Siren
     text: You're Real? I thought my mind was playing tricks on me.
-  - characterName: Nell
+  - characterName: Siren
     text: Get me out of here! Please!
-  - characterName: Nell
+  - characterName: Siren
     text: You have to help me find a way out of this suffocating box
   - characterName: '>'
     text: What... what are you?
-  - characterName: Nell
+  - characterName: Siren
     text: What are you?! What are YOU?!
-  - characterName: 'Nell '
+  - characterName: Siren
     text: 'A pitiful guppy that crawled to land only to have its brain fried by the
       sun?! '
-  - characterName: Nell
+  - characterName: Siren
     text: 'LET ME OUT!! '
-  - characterName: Nell
+  - characterName: Siren
     text: ...
-  - characterName: Nell
-    text: please...
+  - characterName: Siren
+    text: Please...
   - characterName: '>'
     text: Fine, I'll help you.
-  - characterName: Nell
+  - characterName: Siren
     text: Thank you. The human that trapped me here uses that strange contraption
       *points to computer* to open and close the cell.

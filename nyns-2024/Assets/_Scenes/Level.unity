@@ -4416,6 +4416,11 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1d786028334c67743a9e63a963b16dc2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9b76e6df6ac00b542a1da70571284309, type: 2}
     - target: {fileID: 919132149155446097, guid: 1d786028334c67743a9e63a963b16dc2,
         type: 3}
       propertyPath: m_Name
@@ -5188,6 +5193,11 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1d786028334c67743a9e63a963b16dc2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9b76e6df6ac00b542a1da70571284309, type: 2}
     - target: {fileID: 919132149155446097, guid: 1d786028334c67743a9e63a963b16dc2,
         type: 3}
       propertyPath: m_Name
@@ -48001,6 +48011,11 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -6483264720827800135, guid: fd0be30b398c14e4f90d41d7624a3c31,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e48379e952da582469db25881829da98, type: 2}
     - target: {fileID: 919132149155446097, guid: fd0be30b398c14e4f90d41d7624a3c31,
         type: 3}
       propertyPath: m_Name
@@ -55557,6 +55572,11 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1d786028334c67743a9e63a963b16dc2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9b76e6df6ac00b542a1da70571284309, type: 2}
     - target: {fileID: 919132149155446097, guid: 1d786028334c67743a9e63a963b16dc2,
         type: 3}
       propertyPath: m_Name

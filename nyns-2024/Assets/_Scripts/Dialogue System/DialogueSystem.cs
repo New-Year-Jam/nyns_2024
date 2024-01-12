@@ -27,6 +27,17 @@ public class DialogueSystem : MonoBehaviour
     private Character _characterComponent;
     private int _index;
 
+    public void SetDialogue (line[] characterDialogue)
+    {
+        _cameraLock.changeState(true);
+        _movementLock.changeState(true);
+
+        _characterDialogue = characterDialogue;
+        _characterTextUI.text = "";
+
+        StartDialogue();
+    }
+
     public void SetDialogue(Character characterComponent, line[] characterDialogue)
     {
         _cameraLock.changeState(true);
@@ -87,7 +98,11 @@ public class DialogueSystem : MonoBehaviour
             gameObject.SetActive(false);
             _cameraLock.changeState(false);
             _movementLock.changeState(false);
-            _characterComponent.EnableInteractivity();
+
+            if (_characterComponent != null)
+            {
+                _characterComponent.EnableInteractivity();
+            }
         }
     }
 }

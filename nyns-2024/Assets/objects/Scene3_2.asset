@@ -13,9 +13,13 @@ MonoBehaviour:
   m_Name: Scene3_2
   m_EditorClassIdentifier: 
   lines:
-  - characterName: '>'
-    text: A vault?
-  - characterName: '>'
-    text: I thought it was going to open the door!
   - characterName: Nell
-    text: Well, What's inside it? It could be helpful.
+    text: That key...
+  - characterName: Nell
+    text: I believe it would be able to open my cell from the inside.
+  - characterName: Nell
+    text: Please, find a way to open the hatch between us.
+  - characterName: '>'
+    text: Don't worry, we're almost there.
+  - characterName: Nell
+    text: Thank you, friend.

@@ -16,6 +16,12 @@ public class PauseMenu : MonoBehaviour
     private GameObject _dialogueUI;
 
     [SerializeField]
+    private Signal _inventoryUI;
+
+    [SerializeField]
+    private Signal _inputUI; 
+
+    [SerializeField]
     private GameObject _pauseMenuUI;
 
     private void Update()
@@ -35,10 +41,8 @@ public class PauseMenu : MonoBehaviour
         if (_dialogueUI.activeSelf || pauseState) {
             _cameraLock.changeState(true);
             _movementLock.changeState(true);
-
-        // Prevent the user from moving the camera if the pause menu is inactive
-        // but the camera is still locked by something else.
-        } else if (_cameraLock.getState() && !pauseState)
+        }
+        else if (_inputUI.getState() || _inventoryUI.getState())
         {
             _cameraLock.changeState(true);
             _movementLock.changeState(false);

@@ -8,6 +8,7 @@ public class InventorySystem : MonoBehaviour
 {
     [SerializeField] Inventory inventoryToView;
     [SerializeField] InventoryListController uiList;
+    [SerializeField] Signal isShowing;
     
     [Header("UI Movement Variables")]
     [SerializeField] Transform inPoint;
@@ -38,6 +39,7 @@ public class InventorySystem : MonoBehaviour
         {
             active = !active;
             cameraLock.changeState(!cameraLock.getState());
+            isShowing.changeState(!isShowing.getState());
             changePosition(active);
         }
 

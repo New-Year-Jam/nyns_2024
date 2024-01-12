@@ -16,6 +16,7 @@ public class InputUI : MonoBehaviour {
     [SerializeField] GameObject _interactiveFish;
     [SerializeField] GameObject _tutorialPassword;
     [SerializeField] GameObject _storyPassword;
+    [SerializeField] Signal _isShowing;
     private bool _tutorialMode = true;
 
     Password passwordToCheck;
@@ -50,6 +51,7 @@ public class InputUI : MonoBehaviour {
     public void enterAttempt()
     {
         //Convert string attempt to number
+        _isShowing.changeState(true);
         int attempt = int.Parse(floatingString.getString());
         clearAttempt();
         Debug.Log("Making Attempt: " + attempt);
@@ -57,6 +59,7 @@ public class InputUI : MonoBehaviour {
         {
             // Attempt successful
             passwordToCheck.activatePositiveSignal();
+            _isShowing.changeState(false);
             Hide();
 
             if (_tutorialMode)
@@ -79,7 +82,7 @@ public class InputUI : MonoBehaviour {
         {
             Debug.Log("Fail!");
             passwordToCheck.activateNegativeSignal();
-            Hide();
+            // Hide();
         }
     }
 

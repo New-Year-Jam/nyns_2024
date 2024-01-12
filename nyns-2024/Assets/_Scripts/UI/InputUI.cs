@@ -23,11 +23,13 @@ public class InputUI : MonoBehaviour {
 
     public void Show()
     {
+        _isShowing.changeState(true);
         Debug.Log("Trying to show");
         cameraLock.changeState(true);
         LeanTween.moveY(gameObject,inPoint.localPosition.y,1.0f).setEaseInCubic();
     }
     public void Hide(){
+        _isShowing.changeState(false);
         passwordToCheck = null;
         cameraLock.changeState(false);
         LeanTween.moveY(gameObject,outPoint.localPosition.y,1.0f).setEaseOutCubic();
@@ -51,7 +53,6 @@ public class InputUI : MonoBehaviour {
     public void enterAttempt()
     {
         //Convert string attempt to number
-        _isShowing.changeState(true);
         int attempt = int.Parse(floatingString.getString());
         clearAttempt();
         Debug.Log("Making Attempt: " + attempt);
@@ -59,7 +60,6 @@ public class InputUI : MonoBehaviour {
         {
             // Attempt successful
             passwordToCheck.activatePositiveSignal();
-            _isShowing.changeState(false);
             Hide();
 
             if (_tutorialMode)

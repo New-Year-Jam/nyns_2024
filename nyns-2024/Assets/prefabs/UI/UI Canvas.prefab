@@ -1280,8 +1280,6 @@ MonoBehaviour:
   _movementLock: {fileID: 11400000, guid: 3c24dd7f4dafea64ab210f60dc53a195, type: 2}
   _pauseLock: {fileID: 0}
   _dialogueUI: {fileID: 3383977707427858840}
-  _inventoryUI: {fileID: 0}
-  _terminalUI: {fileID: 0}
   _pauseMenuUI: {fileID: 3690372560980443188}
 --- !u!1 &3690372560980443188
 GameObject:
@@ -2490,6 +2488,12 @@ PrefabInstance:
       propertyPath: outPoint
       value: 
       objectReference: {fileID: 8177958521604028525}
+    - target: {fileID: 990167516376487047, guid: 0da6282bdc2e7a5469dede09037a4585,
+        type: 3}
+      propertyPath: cameraLock
+      value: 
+      objectReference: {fileID: 11400000, guid: 1d01ab5d5d69967428fdd19fc201c36b,
+        type: 2}
     - target: {fileID: 1291384922609607358, guid: 0da6282bdc2e7a5469dede09037a4585,
         type: 3}
       propertyPath: m_AnchorMax.y

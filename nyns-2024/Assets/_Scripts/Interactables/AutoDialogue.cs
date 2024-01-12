@@ -6,5 +6,4 @@ public class AutoDialogue : Character {
         Action();
         this.gameObject.SetActive(false);
     }
-
 }

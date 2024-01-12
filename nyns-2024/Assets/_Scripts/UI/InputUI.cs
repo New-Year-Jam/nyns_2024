@@ -11,6 +11,9 @@ public class InputUI : MonoBehaviour {
     [SerializeField] Signal cameraLock;
     [SerializeField] GameObject _lockedObject;
     [SerializeField] GameObject _autoDialogue;
+    [SerializeField] GameObject _keypadObject;
+    [SerializeField] GameObject _interactiveBook;
+    [SerializeField] GameObject _interactiveFish;
 
     Password passwordToCheck;
 
@@ -51,11 +54,12 @@ public class InputUI : MonoBehaviour {
         {
             // Attempt successful
             passwordToCheck.activatePositiveSignal();
-            Debug.Log("Success!");
             Hide();
+            _keypadObject.SetActive(false);
             _lockedObject.SetActive(false);
             _autoDialogue.SetActive(true);
-            // _dialogueSystem.SetDialogue(new Character(), _dialogue);
+            _interactiveBook.SetActive(true);
+            _interactiveFish.SetActive(true);
         }
         else
         {
@@ -66,7 +70,4 @@ public class InputUI : MonoBehaviour {
     }
 
     public void setPasswordToCheck(Password password){passwordToCheck = password;}
-
-
-
 }

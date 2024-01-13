@@ -61728,6 +61728,8 @@ MonoBehaviour:
   hook6: {fileID: 11400000, guid: 458d70f6dfb130b418fbed134f071965, type: 2}
   _fish6: {fileID: 1357882361}
   _openHatch: {fileID: 1779159428}
+  _dialogueSystem: {fileID: 6323773947276658963}
+  _dialogue: {fileID: 11400000, guid: 4160703e87377cc4bad86772dbabfe5b, type: 2}
 --- !u!1 &1272657769
 GameObject:
   m_ObjectHideFlags: 0
@@ -83992,27 +83994,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!95 &647073449253315440
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6147731970460296112}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 82a8217ca85139f4d95c20b155d3760d, type: 3}
-  m_Controller: {fileID: 9100000, guid: 5d746d316858c8944b0439e29972ee5d, type: 2}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &745021934270735804
 GameObject:
   m_ObjectHideFlags: 0
@@ -85425,7 +85406,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6780997219230775562}
-  - component: {fileID: 647073449253315440}
   m_Layer: 0
   m_Name: Mermaid Endpoint
   m_TagString: Untagged

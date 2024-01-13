@@ -23,6 +23,12 @@ public class DialogueSystem : MonoBehaviour
     [SerializeField]
     private float _textSpeed;
 
+    [SerializeField]
+    private Signal _endGameplay;
+
+    [SerializeField]
+    private Signal _endDialogue;
+
     private line[] _characterDialogue;
     private Character _characterComponent;
     private int _index;
@@ -69,6 +75,11 @@ public class DialogueSystem : MonoBehaviour
                 StopAllCoroutines();
                 _characterTextUI.text = _characterDialogue[_index].text;
             }
+        }
+
+        if(_endGameplay.getState() && _index == _characterDialogue.Length - 1)
+        {
+            _endDialogue.changeState(true);
         }
     }
 

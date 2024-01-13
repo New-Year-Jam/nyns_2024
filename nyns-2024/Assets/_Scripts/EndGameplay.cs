@@ -15,7 +15,6 @@ public class EndGameplay : MonoBehaviour
         if (_endGameplay.getState())
         {
             LeanTween.move(_cageWall, _openPoint, _openSpeed).setEaseOutCubic();
-            Debug.Log("This is the end...");
             _dialogueSystem.gameObject.SetActive(true);
             _dialogueSystem.SetDialogue(_dialogue.getLines());
             this.enabled = false;

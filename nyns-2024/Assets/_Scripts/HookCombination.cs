@@ -51,6 +51,7 @@ public class HookCombination : MonoBehaviour
         if (hook1.getState() && hook2.getState() && hook3.getState() && hook4.getState() && hook5.getState() && hook6.getState())
         {
             _openHatch.GetComponent<EndGameplay>().enabled = true;
+            _openHatch.GetComponent<EndAnimation>().enabled = true;
 
             // Prevent this script from running throughout the rest of the game.
             this.enabled = false;

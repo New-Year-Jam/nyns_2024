@@ -17,7 +17,8 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
-        _audioManager.PlaySong("First Impression Stripped");
+        _audioManager.Stop("First Impression");
+        _audioManager.Play("First Impression Stripped");
         SceneManager.LoadScene("Level");
     }
 

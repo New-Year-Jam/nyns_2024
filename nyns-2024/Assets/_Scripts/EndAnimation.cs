@@ -19,8 +19,9 @@ public class EndAnimation : MonoBehaviour
     private IEnumerator End()
     {
         yield return new WaitForSeconds(1);
-
-        LeanTween.move(_siren, _endPoint, _swimSpeed).setEaseOutCubic();
+        LeanTween.rotate(_siren, new Vector3(75f, 180f, 0f), 3f).setEaseOutCubic();
+        yield return new WaitForSeconds(1.5f);
+        LeanTween.move(_siren, _endPoint.position, _swimSpeed).setEaseOutCubic();
         this.enabled = false;
     }
 }

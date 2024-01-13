@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -6,7 +7,6 @@ public class AudioManager : MonoBehaviour
 {
     public Sound[] _sounds;
     public static AudioManager instance;
-    private AudioSource[] _allSources;
 
     void Awake()
     {
@@ -37,16 +37,6 @@ public class AudioManager : MonoBehaviour
         Play("First Impression");
     }
 
-    public void PlaySong(string name)
-    {
-        foreach(AudioSource sound in _allSources)
-        {
-            sound.Stop();
-        }
-
-        Play(name);
-    }
-
     public void Play(string name)
     {
         Sound sound = Array.Find(_sounds, sound => sound.name == name);
@@ -54,6 +44,16 @@ public class AudioManager : MonoBehaviour
         if(sound != null)
         {
             sound.source.Play();
+        }
+    }
+
+    public void Stop(string name)
+    {
+        Sound sound = Array.Find(_sounds, sound => sound.name == name);
+
+        if(sound != null)
+        {
+            sound.source.Stop();
         }
     }
 }

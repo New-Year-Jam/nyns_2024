@@ -1384,7 +1384,7 @@ MonoBehaviour:
   _settingsUI: {fileID: 1439047196}
   _tutorialUI: {fileID: 1463271246}
   _creditsUI: {fileID: 874031672}
-  _audioManager: {fileID: 0}
+  _audioManager: {fileID: 600450398}
 --- !u!1 &937911980
 GameObject:
   m_ObjectHideFlags: 0

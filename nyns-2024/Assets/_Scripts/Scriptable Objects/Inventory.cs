@@ -38,6 +38,5 @@ public class Inventory : ScriptableObject {
 
     public void OnEnable() {
         itemList = new List<Item>(startingItems);
-        Debug.Log(itemList.Count);
     }
 }

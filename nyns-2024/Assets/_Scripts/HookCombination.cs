@@ -15,6 +15,8 @@ public class HookCombination : MonoBehaviour
     [SerializeField] Signal hook6;
     [SerializeField] GameObject _fish6;
     [SerializeField] GameObject _openHatch;
+    [SerializeField] DialogueSystem _dialogueSystem;
+    [SerializeField] Dialogue _dialogue;
 
     private void Update()
     {
@@ -53,6 +55,8 @@ public class HookCombination : MonoBehaviour
             _openHatch.GetComponent<EndGameplay>().enabled = true;
             _openHatch.GetComponent<EndAnimation>().enabled = true;
 
+            _dialogueSystem.gameObject.SetActive(true);
+            _dialogueSystem.SetDialogue(_dialogue.getLines());
             // Prevent this script from running throughout the rest of the game.
             this.enabled = false;
         }

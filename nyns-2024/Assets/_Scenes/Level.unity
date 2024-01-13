@@ -9756,7 +9756,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 82a8217ca85139f4d95c20b155d3760d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 26.27
+      value: 28.11
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 82a8217ca85139f4d95c20b155d3760d,
         type: 3}
@@ -9846,13 +9846,7 @@ PrefabInstance:
     - target: {fileID: 5866666021909216657, guid: 82a8217ca85139f4d95c20b155d3760d,
         type: 3}
       propertyPath: m_WarningMessage
-      value: "\nBinding warning: Some generic clip(s) animate transforms that are
-        already bound by a Humanoid avatar. These transforms can only be changed
-        by Humanoid clips.\n\tTransform 'RightLeg'\n\tTransform 'LeftFoot'\n\tTransform
-        'RightFoot'\n\tTransform 'LeftLeg'\n\tTransform 'LeftHandMiddle2'\n\tTransform
-        'Neck'\n\tTransform 'LeftHandThumb1'\n\tTransform 'RightHandIndex3'\n\tTransform
-        'RightHandMiddle1'\n\tTransform 'LeftUpLeg'\n\tand more ...\n\tFrom animation
-        clip 'Take 001'"
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -81887,6 +81881,7 @@ MonoBehaviour:
   _siren: {fileID: 998603844}
   _endPoint: {fileID: 6780997219230775562}
   _swimSpeed: 10
+  _swimAnim: {fileID: 9100000, guid: 31d31f736d6a5dc4abad9fe0af2bbf69, type: 2}
 --- !u!1 &2071309560
 GameObject:
   m_ObjectHideFlags: 0

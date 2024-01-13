@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -990,6 +990,21 @@ MonoBehaviour:
     volume: 0.5
     loop: 1
     source: {fileID: 0}
+  - name: First Impression Stripped
+    clip: {fileID: 8300000, guid: 9f96e2e644dbbe14da8065021319f384, type: 3}
+    volume: 0.5
+    loop: 1
+    source: {fileID: 0}
+  - name: UI Open
+    clip: {fileID: 8300000, guid: da9ee4c6f565e8e4ab7dd2ba0fda1573, type: 3}
+    volume: 0.5
+    loop: 0
+    source: {fileID: 0}
+  - name: UI Close
+    clip: {fileID: 8300000, guid: 1b6b02c1b1ff07c44bfcf9a6f32dacdf, type: 3}
+    volume: 0.5
+    loop: 0
+    source: {fileID: 0}
 --- !u!4 &600450399
 Transform:
   m_ObjectHideFlags: 0
@@ -1369,6 +1384,7 @@ MonoBehaviour:
   _settingsUI: {fileID: 1439047196}
   _tutorialUI: {fileID: 1463271246}
   _creditsUI: {fileID: 874031672}
+  _audioManager: {fileID: 0}
 --- !u!1 &937911980
 GameObject:
   m_ObjectHideFlags: 0

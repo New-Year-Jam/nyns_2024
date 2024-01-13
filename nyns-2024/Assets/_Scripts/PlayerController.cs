@@ -32,6 +32,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Signal movementLock;
     bool previousMovementLock;
 
+    [SerializeField] GameObject _interactivity;
+
     private void Awake() {
         UnlockCamera();
         movementLock.changeState(false);
@@ -108,6 +110,15 @@ public class PlayerController : MonoBehaviour
         if (Physics.Raycast(playerPosition, crosshairDirection, out RaycastHit hit))
         {
             Interactable interactableObj = hit.collider.gameObject.GetComponent<Interactable>();
+
+            if (interactableObj)
+            {
+                _interactivity.SetActive(true);
+            }
+            else
+            {
+                _interactivity.SetActive(false);
+            }
 
             if (Input.GetButton("Interact") && interactableObj) {
                 interactableObj.Action();

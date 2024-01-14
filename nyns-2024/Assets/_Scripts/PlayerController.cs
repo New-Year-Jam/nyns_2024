@@ -49,6 +49,7 @@ public class PlayerController : MonoBehaviour
             if (currentLockState == true)
             {
                 LockCamera();
+                _interactivity.SetActive(false);
             } 
             else
             {
@@ -105,24 +106,28 @@ public class PlayerController : MonoBehaviour
     private void HandleInteractions()
     {
         Vector3 playerPosition = _cameraOrientation.position;
-        Vector3 crosshairDirection = _cameraOrientation.TransformDirection(Vector3.forward) * _interactDistance;
+        Vector3 crosshairDirection = _cameraOrientation.TransformDirection(Vector3.forward);
 
-        if (Physics.Raycast(playerPosition, crosshairDirection, out RaycastHit hit))
+        if (Physics.Raycast(playerPosition, crosshairDirection, out RaycastHit hit, _interactDistance))
         {
             Interactable interactableObj = hit.collider.gameObject.GetComponent<Interactable>();
 
             if (interactableObj)
             {
                 _interactivity.SetActive(true);
+                if (Input.GetButton("Interact"))
+                {
+                    interactableObj.Action();
+                }
             }
             else
             {
                 _interactivity.SetActive(false);
             }
-
-            if (Input.GetButton("Interact") && interactableObj) {
-                interactableObj.Action();
-            }
+        }
+        else
+        {
+            _interactivity.SetActive(false);
         }
     }
 }

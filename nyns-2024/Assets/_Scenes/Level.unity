@@ -4526,6 +4526,7 @@ MonoBehaviour:
   doorOpenPoint: {fileID: 123021912}
   doorClosePoint: {fileID: 123021913}
   doorOpenSpeed: 1
+  _audioManager: {fileID: 0}
 --- !u!1001 &128425382
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54838,6 +54839,7 @@ MonoBehaviour:
   doorOpenPoint: {fileID: 947049786}
   doorClosePoint: {fileID: 947049787}
   doorOpenSpeed: 1
+  _audioManager: {fileID: 0}
 --- !u!1 &949192560
 GameObject:
   m_ObjectHideFlags: 0
@@ -54956,94 +54958,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 8.362, y: -29.907, z: 2.079}
---- !u!1001 &953260031
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1543625082784937523, guid: b721f1ad360f5524885af80f1beceafd,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 22.399
-      objectReference: {fileID: 0}
-    - target: {fileID: 1543625082784937523, guid: b721f1ad360f5524885af80f1beceafd,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.668
-      objectReference: {fileID: 0}
-    - target: {fileID: 1543625082784937523, guid: b721f1ad360f5524885af80f1beceafd,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -66.271
-      objectReference: {fileID: 0}
-    - target: {fileID: 1543625082784937523, guid: b721f1ad360f5524885af80f1beceafd,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1543625082784937523, guid: b721f1ad360f5524885af80f1beceafd,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1543625082784937523, guid: b721f1ad360f5524885af80f1beceafd,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1543625082784937523, guid: b721f1ad360f5524885af80f1beceafd,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1543625082784937523, guid: b721f1ad360f5524885af80f1beceafd,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1543625082784937523, guid: b721f1ad360f5524885af80f1beceafd,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1543625082784937523, guid: b721f1ad360f5524885af80f1beceafd,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3630348356845897737, guid: b721f1ad360f5524885af80f1beceafd,
-        type: 3}
-      propertyPath: active
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3630348356845897737, guid: b721f1ad360f5524885af80f1beceafd,
-        type: 3}
-      propertyPath: _storyDialogue
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3630348356845897737, guid: b721f1ad360f5524885af80f1beceafd,
-        type: 3}
-      propertyPath: _dialogueSystem
-      value: 
-      objectReference: {fileID: 6323773947276658963}
-    - target: {fileID: 6825958219636120280, guid: b721f1ad360f5524885af80f1beceafd,
-        type: 3}
-      propertyPath: m_Name
-      value: DialogueTrigger (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6825958219636120280, guid: b721f1ad360f5524885af80f1beceafd,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b721f1ad360f5524885af80f1beceafd, type: 3}
 --- !u!114 &955096661 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 990167516376487047, guid: 0da6282bdc2e7a5469dede09037a4585,
@@ -61962,6 +61876,7 @@ GameObject:
   - component: {fileID: 1263636072}
   - component: {fileID: 1263636071}
   - component: {fileID: 1263636070}
+  - component: {fileID: 1263636073}
   m_Layer: 0
   m_Name: Story Password
   m_TagString: Untagged
@@ -62023,6 +61938,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2089349672}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1263636073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263636069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 702e73fccb5f8254f8be75dd5e3662ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioManager: {fileID: 0}
 --- !u!1 &1270788116
 GameObject:
   m_ObjectHideFlags: 0
@@ -62088,6 +62016,7 @@ MonoBehaviour:
   _openHatch: {fileID: 1779159428}
   _dialogueSystem: {fileID: 6323773947276658963}
   _dialogue: {fileID: 11400000, guid: 4160703e87377cc4bad86772dbabfe5b, type: 2}
+  _audioManager: {fileID: 0}
 --- !u!1 &1272657769
 GameObject:
   m_ObjectHideFlags: 0
@@ -87692,7 +87621,6 @@ SceneRoots:
   - {fileID: 782592782}
   - {fileID: 7684639719911035274}
   - {fileID: 1012871772}
-  - {fileID: 953260031}
   - {fileID: 502107368}
   - {fileID: 181435714}
   - {fileID: 203599666}

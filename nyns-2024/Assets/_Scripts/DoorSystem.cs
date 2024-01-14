@@ -13,6 +13,13 @@ public class DoorSystem : MonoBehaviour
     [SerializeField] float doorOpenSpeed = 1.0f;
     bool previousSignalState;
 
+    [SerializeField]
+    private AudioManager _audioManager;
+
+    private void Awake()
+    {
+        _audioManager = FindObjectOfType<AudioManager>();
+    }
 
     private void Start() {
         previousSignalState = signalToListen.getState();
@@ -46,6 +53,7 @@ public class DoorSystem : MonoBehaviour
             Debug.Log("Door is locked");    
         }
 
+        _audioManager.Play("Door");
     }
 
 

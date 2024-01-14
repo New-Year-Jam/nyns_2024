@@ -21,6 +21,14 @@ public class InputUI : MonoBehaviour {
 
     Password passwordToCheck;
 
+    [SerializeField]
+    private AudioManager _audioManager;
+
+    private void Awake()
+    {
+        _audioManager = FindObjectOfType<AudioManager>();
+    }
+
     public void Show()
     {
         _isShowing.changeState(true);
@@ -38,6 +46,7 @@ public class InputUI : MonoBehaviour {
 
     public void addNumberToAttempt(string codeStr)
     {
+        _audioManager.Play("Keypad Number");
         floatingString.changeString(floatingString.getString()+codeStr);
         UpdateText();
         Debug.Log(floatingString.getString());
@@ -45,6 +54,7 @@ public class InputUI : MonoBehaviour {
 
     public void clearAttempt()
     {
+        _audioManager.Play("Keypad Clear");
         floatingString.changeString("");
         UpdateText();
         Debug.Log(floatingString.getString());
@@ -68,6 +78,7 @@ public class InputUI : MonoBehaviour {
                 _scene2Dialogue.SetActive(true);
                 _tutorialPassword.SetActive(false);
                 _storyPassword.SetActive(true);
+                _audioManager.Play("Password Correct");
             }
             else
             {
@@ -76,12 +87,14 @@ public class InputUI : MonoBehaviour {
                 _lockedObject.SetActive(false);
                 _interactiveBook.SetActive(true);
                 _interactiveFish.SetActive(true);
+                _audioManager.Play("Password Correct");
             }
         }
         else
         {
             Debug.Log("Fail!");
             passwordToCheck.activateNegativeSignal();
+            _audioManager.Play("Password Wrong");
             // Hide();
         }
     }

@@ -1005,6 +1005,66 @@ MonoBehaviour:
     volume: 0.5
     loop: 0
     source: {fileID: 0}
+  - name: Door
+    clip: {fileID: 8300000, guid: 9744f90b53f58e440aee5752b57dd9b9, type: 3}
+    volume: 0.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Hook Correct 1
+    clip: {fileID: 8300000, guid: 097edc098d00a6c41beb42022aef8697, type: 3}
+    volume: 0.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Hook Correct 2
+    clip: {fileID: 8300000, guid: 05e37bc5e94ade2489b446ce478d0ee9, type: 3}
+    volume: 0.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Hook Correct 3
+    clip: {fileID: 8300000, guid: aec8f591734c3db47b574b1e062776bc, type: 3}
+    volume: 0.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Hook Correct 4
+    clip: {fileID: 8300000, guid: 25c9621dcd414e047a1482704df49abf, type: 3}
+    volume: 0.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Hook Correct 5
+    clip: {fileID: 8300000, guid: 12b479cbf1b845e4ba07bf0e9b22d928, type: 3}
+    volume: 0.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Hook Correct 6
+    clip: {fileID: 8300000, guid: fd4dd44469e37e34587e8c185cafae51, type: 3}
+    volume: 0.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Keypad Number
+    clip: {fileID: 8300000, guid: efd539967b08dab4cb79858cf4c18829, type: 3}
+    volume: 0.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Keypad Clear
+    clip: {fileID: 8300000, guid: 16c38c45a9426d44a99bd15de448c7fd, type: 3}
+    volume: 0.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Locked Together
+    clip: {fileID: 8300000, guid: 48745fcfb17ad7448936e91b6038f9fd, type: 3}
+    volume: 0.5
+    loop: 1
+    source: {fileID: 0}
+  - name: Password Correct
+    clip: {fileID: 8300000, guid: b55151cc7328c1e4fa5d8a967e65260f, type: 3}
+    volume: 0.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Password Wrong
+    clip: {fileID: 8300000, guid: 2b966e9a679e57242871092b94bb47c8, type: 3}
+    volume: 0.5
+    loop: 0
+    source: {fileID: 0}
 --- !u!4 &600450399
 Transform:
   m_ObjectHideFlags: 0

@@ -8,12 +8,14 @@ public class EndAnimation : MonoBehaviour
     [SerializeField] Transform _endPoint;
     [SerializeField] float _swimSpeed;
     [SerializeField] RuntimeAnimatorController _swimAnim;
+    private bool _allowAnim = true;
 
     private void Update()
     {
-        if (_endDialogue.getState())
+        if (_endDialogue.getState() && _allowAnim)
         {
             StartCoroutine("End");
+            _allowAnim = false;
         }
     }
 

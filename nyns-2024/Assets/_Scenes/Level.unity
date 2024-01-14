@@ -6869,6 +6869,7 @@ GameObject:
   - component: {fileID: 279642617}
   - component: {fileID: 279642619}
   - component: {fileID: 279642618}
+  - component: {fileID: 279642620}
   m_Layer: 0
   m_Name: Scene 2 Dialogue
   m_TagString: Untagged
@@ -6929,6 +6930,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 12.661557, y: 9.896637, z: 14.97431}
   m_Center: {x: -2.1591547, y: -0.3004923, z: 1.0372925}
+--- !u!114 &279642620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 279642616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 702e73fccb5f8254f8be75dd5e3662ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioManager: {fileID: 0}
 --- !u!1 &282613667
 GameObject:
   m_ObjectHideFlags: 0
@@ -61876,7 +61890,6 @@ GameObject:
   - component: {fileID: 1263636072}
   - component: {fileID: 1263636071}
   - component: {fileID: 1263636070}
-  - component: {fileID: 1263636073}
   m_Layer: 0
   m_Name: Story Password
   m_TagString: Untagged
@@ -61938,19 +61951,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2089349672}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1263636073
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1263636069}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 702e73fccb5f8254f8be75dd5e3662ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _audioManager: {fileID: 0}
 --- !u!1 &1270788116
 GameObject:
   m_ObjectHideFlags: 0
@@ -62003,16 +62003,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hook1: {fileID: 11400000, guid: 722ceed0519c54c428154b2d19a8c959, type: 2}
   _fish1: {fileID: 1828601661}
+  _playAudio1: 1
   hook2: {fileID: 11400000, guid: a05a89898aca4804386f1fccb9b6bad2, type: 2}
   _fish2: {fileID: 1774290846}
+  _playAudio2: 1
   hook3: {fileID: 11400000, guid: f7ba55431a6f7384687a4b346e7eb460, type: 2}
   _fish3: {fileID: 1772620505}
+  _playAudio3: 1
   hook4: {fileID: 11400000, guid: 06cf050ed430ad84bb3666de0c85cec0, type: 2}
   _fish4: {fileID: 1986741744}
+  _playAudio4: 1
   hook5: {fileID: 11400000, guid: 39c624464a4cf41448b851e9414d4bed, type: 2}
   _fish5: {fileID: 1465336841}
+  _playAudio5: 1
   hook6: {fileID: 11400000, guid: 458d70f6dfb130b418fbed134f071965, type: 2}
   _fish6: {fileID: 1357882361}
+  _playAudio6: 1
   _openHatch: {fileID: 1779159428}
   _dialogueSystem: {fileID: 6323773947276658963}
   _dialogue: {fileID: 11400000, guid: 4160703e87377cc4bad86772dbabfe5b, type: 2}

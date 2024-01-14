@@ -11,6 +11,8 @@ public class InventoryListController : MonoBehaviour
 
     public void setItemListUI(Inventory inventory)
     {
+        clearInventoryUI();
+
         List<Item> itemList = inventory.getInventory();
         for (int i = 0; i < itemList.Count; i++)
         {
@@ -18,6 +20,17 @@ public class InventoryListController : MonoBehaviour
             listItem.name = itemList[i].name + " - UI";
             listItem.GetComponent<ItemListPanel>().SetItemData(itemList[i]);
             listItem.transform.SetParent(this.transform);
+        }
+    }
+
+    private void clearInventoryUI()
+    {
+        int childCount = this.transform.childCount;
+
+        for (int i = 0; i < childCount; i++)
+        {
+            GameObject childObject = transform.GetChild(i).gameObject;
+            Destroy(childObject);
         }
     }
 }

@@ -27,7 +27,7 @@ public class InventoryListController : MonoBehaviour
     {
         int childCount = this.transform.childCount;
 
-        for (int i = 0; i < childCount; i++)
+        for (int i = 1; i < childCount; i++)
         {
             GameObject childObject = transform.GetChild(i).gameObject;
             Destroy(childObject);

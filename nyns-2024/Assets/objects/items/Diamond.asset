@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3bd50c7081d26fc4b97338d4ebc778db, type: 3}
-  m_Name: Jellyfish
+  m_Name: Diamond
   m_EditorClassIdentifier: 
-  name: Jellyfish
+  name: Diamond
   itemImage: {fileID: 0}
   description: 
   canPickup: 0

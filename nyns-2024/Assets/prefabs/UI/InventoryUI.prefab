@@ -87,15 +87,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryToView: {fileID: 11400000, guid: 75d123ab4ca3ccd469f8d17759143338, type: 2}
   uiList: {fileID: 5114613959141094076}
-  isShowing: {fileID: 0}
+  isShowing: {fileID: 11400000, guid: ba33c7941ebee4e438ca59ed13d38a9f, type: 2}
   inPoint: {fileID: 0}
   outPoint: {fileID: 0}
   moveTime: 0.5
-  cameraLock: {fileID: 0}
+  cameraLock: {fileID: 11400000, guid: 1d01ab5d5d69967428fdd19fc201c36b, type: 2}
   headerText: {fileID: 0}
   headerBody: {fileID: 0}
-  descriptionHeader: {fileID: 0}
-  descriptionBody: {fileID: 0}
+  descriptionHeader: {fileID: 11400000, guid: 96cb5047560721b4f8731829bb36a084, type: 2}
+  descriptionBody: {fileID: 11400000, guid: 9fe0a284b6fc83840a37835ab04804ad, type: 2}
 --- !u!1 &6364659804267644161
 GameObject:
   m_ObjectHideFlags: 0

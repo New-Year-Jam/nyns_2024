@@ -43,8 +43,6 @@ public class InventorySystem : MonoBehaviour
             changePosition(active);
         }
 
-        headerText.text = descriptionHeader.getString();
-        headerBody.text = descriptionBody.getString();
         
     }
 

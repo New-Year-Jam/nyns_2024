@@ -2,10 +2,14 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
     public Sound[] _sounds;
+    public AudioMixer _audioMixer;
+    public AudioMixerGroup _audioMixerGroup;
+    public Slider _volumeSlider;
     public static AudioManager instance;
 
     void Awake()
@@ -13,6 +17,7 @@ public class AudioManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+            ChangeVolume();
         }
         else
         {
@@ -25,6 +30,7 @@ public class AudioManager : MonoBehaviour
         foreach(Sound sound in _sounds)
         {
             sound.source = gameObject.AddComponent<AudioSource>();
+            sound.source.outputAudioMixerGroup = _audioMixerGroup;
             sound.source.clip = sound.clip;
 
             sound.source.volume = sound.volume;
@@ -55,5 +61,10 @@ public class AudioManager : MonoBehaviour
         {
             sound.source.Stop();
         }
+    }
+
+    public void ChangeVolume()
+    {
+        _audioMixer.SetFloat("masterVolume", Mathf.Log10(_volumeSlider.value) * 20);
     }
 }

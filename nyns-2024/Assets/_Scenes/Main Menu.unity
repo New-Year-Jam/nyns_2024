@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -782,13 +782,25 @@ MonoBehaviour:
   m_FillRect: {fileID: 1108431073}
   m_HandleRect: {fileID: 1269986515}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 600450398}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: ChangeVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &433174646
 GameObject:
   m_ObjectHideFlags: 0
@@ -1394,84 +1406,87 @@ MonoBehaviour:
   _sounds:
   - name: First Impression
     clip: {fileID: 8300000, guid: 16f029d46364676408edcbaa43a94744, type: 3}
-    volume: 0.5
+    volume: 1
     loop: 1
     source: {fileID: 0}
   - name: First Impression Stripped
     clip: {fileID: 8300000, guid: 9f96e2e644dbbe14da8065021319f384, type: 3}
-    volume: 0.5
+    volume: 1
     loop: 1
     source: {fileID: 0}
   - name: UI Open
     clip: {fileID: 8300000, guid: da9ee4c6f565e8e4ab7dd2ba0fda1573, type: 3}
-    volume: 0.5
+    volume: 1
     loop: 0
     source: {fileID: 0}
   - name: UI Close
     clip: {fileID: 8300000, guid: 1b6b02c1b1ff07c44bfcf9a6f32dacdf, type: 3}
-    volume: 0.5
+    volume: 1
     loop: 0
     source: {fileID: 0}
   - name: Door
     clip: {fileID: 8300000, guid: 9744f90b53f58e440aee5752b57dd9b9, type: 3}
-    volume: 0.5
+    volume: 1
     loop: 0
     source: {fileID: 0}
   - name: Hook Correct 1
     clip: {fileID: 8300000, guid: 097edc098d00a6c41beb42022aef8697, type: 3}
-    volume: 0.5
+    volume: 1
     loop: 0
     source: {fileID: 0}
   - name: Hook Correct 2
     clip: {fileID: 8300000, guid: 05e37bc5e94ade2489b446ce478d0ee9, type: 3}
-    volume: 0.5
+    volume: 1
     loop: 0
     source: {fileID: 0}
   - name: Hook Correct 3
     clip: {fileID: 8300000, guid: aec8f591734c3db47b574b1e062776bc, type: 3}
-    volume: 0.5
+    volume: 1
     loop: 0
     source: {fileID: 0}
   - name: Hook Correct 4
     clip: {fileID: 8300000, guid: 25c9621dcd414e047a1482704df49abf, type: 3}
-    volume: 0.5
+    volume: 1
     loop: 0
     source: {fileID: 0}
   - name: Hook Correct 5
     clip: {fileID: 8300000, guid: 12b479cbf1b845e4ba07bf0e9b22d928, type: 3}
-    volume: 0.5
+    volume: 1
     loop: 0
     source: {fileID: 0}
   - name: Hook Correct 6
     clip: {fileID: 8300000, guid: fd4dd44469e37e34587e8c185cafae51, type: 3}
-    volume: 0.5
+    volume: 1
     loop: 0
     source: {fileID: 0}
   - name: Keypad Number
     clip: {fileID: 8300000, guid: efd539967b08dab4cb79858cf4c18829, type: 3}
-    volume: 0.5
+    volume: 1
     loop: 0
     source: {fileID: 0}
   - name: Keypad Clear
     clip: {fileID: 8300000, guid: 16c38c45a9426d44a99bd15de448c7fd, type: 3}
-    volume: 0.5
+    volume: 1
     loop: 0
     source: {fileID: 0}
   - name: Locked Together
     clip: {fileID: 8300000, guid: 48745fcfb17ad7448936e91b6038f9fd, type: 3}
-    volume: 0.5
+    volume: 1
     loop: 1
     source: {fileID: 0}
   - name: Password Correct
     clip: {fileID: 8300000, guid: b55151cc7328c1e4fa5d8a967e65260f, type: 3}
-    volume: 0.5
+    volume: 1
     loop: 0
     source: {fileID: 0}
   - name: Password Wrong
     clip: {fileID: 8300000, guid: 2b966e9a679e57242871092b94bb47c8, type: 3}
-    volume: 0.5
+    volume: 1
     loop: 0
     source: {fileID: 0}
+  _audioMixer: {fileID: 24100000, guid: 1f8a2eea6cc3c1644aa97c32078912bb, type: 2}
+  _audioMixerGroup: {fileID: 24300002, guid: 1f8a2eea6cc3c1644aa97c32078912bb, type: 2}
+  _volumeSlider: {fileID: 302173591}
 --- !u!4 &600450399
 Transform:
   m_ObjectHideFlags: 0

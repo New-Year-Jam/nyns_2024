@@ -23,6 +23,13 @@ public class PauseMenu : MonoBehaviour
 
     [SerializeField]
     private GameObject _pauseMenuUI;
+    [SerializeField]
+    private AudioManager _audioManager;
+
+    private void Awake()
+    {
+        _audioManager = FindObjectOfType<AudioManager>();
+    }
 
     private void Update()
     {
@@ -68,6 +75,10 @@ public class PauseMenu : MonoBehaviour
         _movementLock.changeState(true);
         _pauseLock.changeState(false);
         
+        _audioManager.Stop("First Impression Stripped");
+        _audioManager.Stop("Locked Together");
+        
+        _audioManager.Play("First Impression");
         SceneManager.LoadScene("Main Menu");
     }
 
